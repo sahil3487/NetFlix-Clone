@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import axios from "axios";
 import { onAuthStateChanged } from "firebase/auth";
 import React, { useEffect, useState } from "react";
@@ -25,6 +26,7 @@ export default function UserListedMovies() {
     if (email) {
       dispatch(getUsersLikedMovies(email));
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [email]);
 
   window.onscroll = () => {
